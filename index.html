@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Placar Rummikub</title>
+</head>
+<body>
+  <main>
+    <h1>Placar Rummikub</h1>
+  
+    <input type="text" id="campoNomeJogador" placeholder="digite o nome do jogador" class="input__jogador"/>
+    <button onClick="criarJogador()" class="botao__jogador"><b>Adicionar novo jogador</b></button>
+
+    <table style="width:90%">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Vitórias</th>
+          <th>Pontuação</th>
+          <th>Total</th>
+          <th colspan="3">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaJogadores">
+      </tbody>
+    </table>
+    <button onClick="apagarJogadores()" class="botao__jogador"><b>Apagar todos os jogadores</b></button>
+  </main>
+    
+    <footer class="rodape">
+      <p>Desenvolvido por Theo &copy; 2023 by Alura</p>
+  </footer>
+  </body>
+  <script src="script.js"></script>
+  </html>

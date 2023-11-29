@@ -1,0 +1,104 @@
+* {
+    text-align: center;
+  }
+  
+  body {
+    font-family: "Roboto Mono", monospace;
+    min-height: 400px;
+    background-image: url("https://games.lol/wp-content/uploads/2022/10/rummikub-pc-full-version.jpg");
+    background-color: #111;
+    background-size: 100%;
+    background-position:initial;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+  }
+  
+  .page-logo {
+    width: 200px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .input__jogador {
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 8px;
+  }
+
+  table {
+    border: 2px solid #ffd89b;
+    border-collapse: collapse;
+    margin: 2rem 5rem;
+    background-color: #ede3ca;
+  }
+  
+  h1 {
+    color: white;
+  }
+  
+  th {
+    padding: 0.5rem 0.5rem;
+  }
+
+  th,
+  tr,
+  td {
+    border: solid 1px #111;
+    color: rgb(0, 0, 0);
+  }
+  
+  button {
+    background-color: #f11d1d;
+    color: #f6f6f6;
+    margin: 1rem 0.5rem;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .botao__jogador {
+    background-color: #f01b1b;
+    color: #f6f6f6;
+    padding: 0.75rem;
+    margin: 2rem 3px;
+    border: #111 solid 3px;
+  }
+
+  .botao__jogador:hover {
+    background-color: gold;
+    color: black
+  }
+
+  .rodape {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 3px;
+    background-color: #22d4fd;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1rem;
+    color: #000000;
+}
+
+  
