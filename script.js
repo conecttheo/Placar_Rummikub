@@ -42,11 +42,12 @@ function adicionarVitoria(index) {
 }
 
 function adicionarValor(index) {
-    let quantidade = parseInt(document.getElementById('quantidade').value);
+    let quantidadeInput = document.getElementById('quantidade');
+    let quantidade = parseInt(quantidadeInput.value);
       
         listaDeJogadores[index].pontos = listaDeJogadores[index].pontos + quantidade;
-        if (quantidade == '') {
-          alert("informe pontuação");
+        if (isNaN(quantidade) || quantidade <= 0) {
+          alert("Informe uma quantidade válida");
           return;
       }
     exibirNaTela();
