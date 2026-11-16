@@ -8,10 +8,7 @@ body {
   padding-bottom: 70px; /* espaço para o rodapé fixo */
   font-family: "Roboto Mono", monospace;
   text-align: center;
-  background-color: #111;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://games.lol/wp-content/uploads/2022/10/rummikub-pc-full-version.jpg");
+  background-color: #0054a1;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
