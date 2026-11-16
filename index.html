@@ -1,38 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    
-    <title>Placar Rummikub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Placar Rummikub</title>
 </head>
 <body>
-  <main>
-    <h1>Placar Rummikub</h1>
-  
-    <input type="text" id="campoNomeJogador" placeholder="digite o nome do jogador" class="input__jogador"/>
-    <button onClick="criarJogador()" class="botao__jogador"><b>Adicionar novo jogador</b></button>
+  <main class="container">
+    <h1 class="page-title">Placar Rummikub</h1>
+    <p class="page-subtitle">
+      Em cada rodada, informe as peças que sobraram para quem perdeu e marque quem venceu.
+    </p>
 
-    <table style="width:90%">
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Vitórias</th>
-          <th>Pontuação</th>
-          <th>Total</th>
-          <th colspan="3">Ações</th>
-        </tr>
-      </thead>
-      <tbody id="tabelaJogadores">
-      </tbody>
-    </table>
-    <button onClick="apagarJogadores()" class="botao__jogador"><b>Apagar todos os jogadores</b></button>
+    <div class="cadastro">
+      <input type="text" id="campoNomeJogador" class="input__jogador" maxlength="30"
+             placeholder="Nome do jogador" aria-label="Nome do jogador">
+      <button type="button" id="botaoAdicionar" class="botao__jogador">Adicionar jogador</button>
+    </div>
+
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+    <div class="tabela-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Jogador</th>
+            <th>Vitórias</th>
+            <th>Pontuação total</th>
+            <th>Peças restantes na rodada</th>
+            <th>Venceu a rodada</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaJogadores"></tbody>
+      </table>
+    </div>
+
+    <div class="barra-acoes">
+      <button type="button" id="botaoFinalizar" class="botao__jogador botao__principal">Finalizar rodada</button>
+      <button type="button" id="botaoDesfazer" class="botao__jogador botao__secundario">Desfazer última rodada</button>
+      <button type="button" id="botaoZerar" class="botao__jogador botao__secundario">Zerar placar</button>
+      <button type="button" id="botaoApagar" class="botao__jogador">Apagar todos os jogadores</button>
+    </div>
+
+    <section class="historico" aria-labelledby="tituloHistorico">
+      <h2 id="tituloHistorico">Histórico de rodadas</h2>
+      <ol id="listaHistorico"></ol>
+    </section>
   </main>
-    
-    <footer class="rodape">
-      <p>Desenvolvido por Theo &copy; 2023 by Alura</p>
+
+  <footer class="rodape">
+    <p>Desenvolvido por Theo &copy; 2023 by Alura</p>
   </footer>
-  </body>
+
   <script src="script.js"></script>
-  </html>
+</body>
+</html>
